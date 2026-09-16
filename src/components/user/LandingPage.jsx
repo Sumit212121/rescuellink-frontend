@@ -393,29 +393,29 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
 
       {/* ══════════════ 2. MASTERPIECE RESPONSIVE HEADER ══════════════ */}
       <header className="bg-white/95 backdrop-blur-xl border-b border-slate-200 sticky top-[37px] z-40 motion-spring shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
 
           {/* Brand Logo with Guaranteed Vibrant Crimson Beveled Shield */}
-          <a href="#hero" className="flex items-center gap-3.5 group shrink-0">
+          <a href="#hero" className="flex items-center gap-1.5 sm:gap-3.5 group shrink-0">
             <div
-              className="w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 motion-spring border"
-              style={{ backgroundColor: '#e11d48', borderColor: '#fda4af', boxShadow: '0 8px 20px -4px rgba(225,29,72,0.45)' }}
+              className="w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-md sm:shadow-lg group-hover:scale-105 motion-spring border shrink-0"
+              style={{ backgroundColor: '#e11d48', borderColor: '#fda4af', boxShadow: '0 4px 14px -2px rgba(225,29,72,0.45)' }}
             >
-              <ShieldCheckIcon className="w-7 h-7 text-white" />
+              <ShieldCheckIcon className="w-4.5 h-4.5 sm:w-7 sm:h-7 text-white" />
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="text-2xl font-black tracking-tight text-slate-900 leading-none">
+            <div className="flex flex-col shrink-0">
+              <div className="flex items-center gap-1 sm:gap-1.5">
+                <span className="text-base sm:text-2xl font-black tracking-tight text-slate-900 leading-none whitespace-nowrap">
                   Rescue<span style={{ color: '#e11d48' }}>Connect</span>
                 </span>
                 <span
-                  className="px-2 py-0.5 rounded text-[9px] font-black tracking-wider uppercase text-white shadow-xs"
+                  className="px-1.5 py-0.5 sm:px-2 rounded text-[8px] sm:text-[9px] font-black tracking-wider uppercase text-white shadow-xs shrink-0"
                   style={{ backgroundColor: '#e11d48' }}
                 >
                   CAD
                 </span>
               </div>
-              <span className="text-[10px] font-black tracking-widest text-slate-500 mt-1 uppercase">
+              <span className="hidden sm:block text-[10px] font-black tracking-widest text-slate-500 mt-1 uppercase whitespace-nowrap">
                 National Emergency Relay Grid
               </span>
             </div>
@@ -441,7 +441,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
           </nav>
 
           {/* Header Action Tools */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             {/* Guaranteed Solid Red SOS Button */}
             <button
               type="button"
@@ -476,7 +476,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
               <button
                 type="button"
                 onClick={() => setShowTrackingModal(true)}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full font-black text-xs motion-spring shadow-sm border cursor-pointer"
+                className="hidden md:inline-flex items-center gap-2 px-3.5 py-2 rounded-full font-black text-xs motion-spring shadow-sm border cursor-pointer"
                 style={{ backgroundColor: '#ffe4e6', borderColor: '#fda4af', color: '#9f1239' }}
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-rose-600 animate-ping" />
@@ -489,19 +489,20 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                 <button
                   type="button"
                   onClick={() => setShowUserDropdown(!showUserDropdown)}
-                  className="flex items-center gap-2.5 pl-2 pr-3.5 py-1.5 rounded-full bg-white hover:bg-slate-50 border border-slate-300 shadow-sm motion-spring cursor-pointer"
+                  className="flex items-center gap-2.5 p-1 sm:pl-2 sm:pr-3.5 sm:py-1.5 rounded-full bg-white hover:bg-slate-50 border border-slate-300 shadow-sm motion-spring cursor-pointer"
+                  aria-label="User profile menu"
                 >
                   <div
-                    className="w-8 h-8 rounded-full text-white font-black text-xs flex items-center justify-center shadow-xs"
+                    className="w-8 h-8 rounded-full text-white font-black text-xs flex items-center justify-center shadow-xs shrink-0"
                     style={{ backgroundColor: '#e11d48' }}
                   >
                     {(user.name || user.username || 'U').slice(0, 2).toUpperCase()}
                   </div>
-                  <div className="flex flex-col text-left">
-                    <span className="text-xs font-bold text-slate-900 leading-tight">
+                  <div className="hidden sm:flex flex-col text-left">
+                    <span className="text-xs font-bold text-slate-900 leading-tight whitespace-nowrap">
                       {user.name || user.username || 'Field Operator'}
                     </span>
-                    <span className="text-[10px] text-emerald-600 font-extrabold leading-none flex items-center gap-1">
+                    <span className="text-[10px] text-emerald-600 font-extrabold leading-none flex items-center gap-1 whitespace-nowrap">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Online
                     </span>
                   </div>
@@ -515,7 +516,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                     </div>
                     <button
                       onClick={() => { setShowHistoryModal(true); setShowUserDropdown(false); }}
-                      className="w-full text-left px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2 font-medium"
+                      className="w-full text-left px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2 font-medium cursor-pointer"
                     >
                       <span>📋</span> Rescue History
                     </button>
@@ -524,7 +525,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                         setShowUserDropdown(false)
                         if (onLogout) onLogout()
                       }}
-                      className="w-full text-left px-4 py-2.5 text-xs text-rose-600 hover:bg-rose-50 flex items-center gap-2 font-medium border-t border-slate-100"
+                      className="w-full text-left px-4 py-2.5 text-xs text-rose-600 hover:bg-rose-50 flex items-center gap-2 font-medium border-t border-slate-100 cursor-pointer"
                     >
                       <span>🚪</span> Log Out
                     </button>
@@ -535,7 +536,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
               <button
                 type="button"
                 onClick={() => openAuth('user', 'login')}
-                className="px-5 py-2 rounded-full border border-slate-300 text-xs font-black text-slate-800 hover:text-slate-950 bg-white hover:bg-slate-50 shadow-sm motion-spring motion-press uppercase tracking-wider cursor-pointer"
+                className="px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full border border-slate-300 text-xs font-black text-slate-800 hover:text-slate-950 bg-white hover:bg-slate-50 shadow-sm motion-spring motion-press uppercase tracking-wider cursor-pointer whitespace-nowrap"
               >
                 Sign In
               </button>
@@ -545,7 +546,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700"
+              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 cursor-pointer shrink-0 transition-colors"
               aria-label="Toggle navigation menu"
             >
               <MenuBarsIcon className="w-5 h-5" />
@@ -572,12 +573,33 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                 <span>🛡️</span> Fiscal Audit
               </button>
             </div>
-            <div className="flex flex-col space-y-2 pt-2 border-t border-slate-100 text-xs font-bold uppercase tracking-wider text-slate-700">
-              <a href="#hero" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-rose-600">Distress Console</a>
-              <a href="#features" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-rose-600">Telemetry Grid</a>
-              <a href="#impact" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-rose-600">Audited Impact</a>
-              <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-rose-600">Protocol Flow</a>
-              <a href="#testimonials" onClick={() => setMobileMenuOpen(false)} className="py-2 hover:text-rose-600">Survivor Accounts</a>
+            {activeSosId && (
+              <button
+                onClick={() => { setShowTrackingModal(true); setMobileMenuOpen(false); }}
+                className="w-full p-3 rounded-2xl border text-xs font-bold text-center flex items-center justify-center gap-2"
+                style={{ backgroundColor: '#ffe4e6', borderColor: '#fda4af', color: '#9f1239' }}
+              >
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-600 animate-ping" />
+                <span>Open Live Radar Tracker</span>
+              </button>
+            )}
+            <div className="flex flex-col space-y-1 pt-2 border-t border-slate-100 text-xs font-bold uppercase tracking-wider text-slate-700">
+              {[
+                ['#hero', 'Home'],
+                ['#features', 'Features'],
+                ['#impact', 'Impact'],
+                ['#how-it-works', 'How It Works'],
+                ['#testimonials', 'Testimonials'],
+              ].map(([href, label]) => (
+                <a
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="py-2.5 px-2 rounded-lg hover:bg-slate-50 hover:text-rose-600 transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
             </div>
           </div>
         )}
