@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" fill="none">
+  <defs>
+    <filter id="blur-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+    <linearGradient id="blob-grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fee2e2" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fecaca" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="blob-grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ccfbf1" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#99f6e4" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#blur-filter)">
+    <path fill="url(#blob-grad-red)" d="M720,290Q690,380,610,435Q530,490,435,465Q340,440,270,385Q200,330,230,240Q260,150,345,115Q430,80,520,110Q610,140,680,200Q750,260,720,290Z" />
+    <path fill="url(#blob-grad-teal)" d="M580,320Q540,410,460,430Q380,450,320,390Q260,330,280,240Q300,150,380,130Q460,110,530,160Q600,210,610,270Q620,330,580,320Z" />
+  </g>
+</svg>

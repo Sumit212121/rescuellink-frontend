@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Human-made natural surface background with warm undertone */
+body {
+  background-color: #faf8f5;
+  color: #1e293b;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Natural geographic grid pattern with subtle warm tint */
+.bg-topo-grid {
+  background-color: #faf8f5;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.28) 1.2px, transparent 1.2px),
+                    linear-gradient(to right, rgba(226, 232, 240, 0.3) 1px, transparent 1px);
+  background-size: 24px 24px, 72px 72px;
+}
+
+/* ══════════════ GUARANTEED COLOR DEFINITIONS (ZERO-DEPENDENCY) ══════════════ */
+.bg-tactical-950 { background-color: #080d1a !important; }
+.bg-tactical-900 { background-color: #0f172a !important; }
+.bg-signal-600 { background-color: #e11d48 !important; }
+.bg-signal-700 { background-color: #be123c !important; }
+.bg-signal-500 { background-color: #f43f5e !important; }
+.bg-signal-100 { background-color: #ffe4e6 !important; }
+.bg-signal-50 { background-color: #fff1f2 !important; }
+.bg-radarEmerald-950 { background-color: #022c22 !important; }
+.bg-radarEmerald-600 { background-color: #059669 !important; }
+.bg-radarEmerald-50 { background-color: #ecfdf5 !important; }
+.bg-opsAmber-900 { background-color: #78350f !important; }
+.bg-opsAmber-500 { background-color: #f59e0b !important; }
+.bg-opsAmber-50 { background-color: #fffbeb !important; }
+.bg-marineBlue-600 { background-color: #0284c7 !important; }
+.bg-marineBlue-50 { background-color: #f0f9ff !important; }
+
+.text-signal-600 { color: #e11d48 !important; }
+.text-signal-700 { color: #be123c !important; }
+.text-signal-400 { color: #fb7185 !important; }
+.text-signal-300 { color: #fda4af !important; }
+.text-radarEmerald-300 { color: #6ee7b7 !important; }
+.text-radarEmerald-400 { color: #34d399 !important; }
+.text-radarEmerald-700 { color: #047857 !important; }
+.text-radarEmerald-800 { color: #065f46 !important; }
+.text-opsAmber-300 { color: #fcd34d !important; }
+.text-opsAmber-700 { color: #b45309 !important; }
+.text-marineBlue-700 { color: #0369a1 !important; }
+
+/* Motion Primitives: Physics-based Spring Transitions */
+.motion-spring {
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.motion-spring-slow {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Motion Primitives: Tactile Press Physics */
+.motion-press {
+  transform: translateY(0);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.motion-press:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+/* Multi-Ring Emergency Radar Sonar (Vibrant Ruby Signal) */
+@keyframes radar-sonar-1 {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.9;
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.5);
+  }
+  100% {
+    transform: scale(1.68);
+    opacity: 0;
+    box-shadow: 0 0 60px rgba(225, 29, 72, 0);
+  }
+}
+
+@keyframes radar-sonar-2 {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.7;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  }
+  100% {
+    transform: scale(2.25);
+    opacity: 0;
+    box-shadow: 0 0 80px rgba(245, 158, 11, 0);
+  }
+}
+
+.animate-radar-1 {
+  animation: radar-sonar-1 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.animate-radar-2 {
+  animation: radar-sonar-2 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite 0.65s;
+}
+
+/* Real-time Status Pulsar */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gradient Text Utilities */
+.text-gradient-rescue {
+  background: linear-gradient(135deg, #e11d48 0%, #ea580c 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-ocean {
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ambient Glow Shadows */
+.glow-signal {
+  box-shadow: 0 10px 30px -5px rgba(225, 29, 72, 0.4);
+}
+
+.glow-cyan {
+  box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.4);
+}
+
+.glow-amber {
+  box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.4);
+}
+
+.glow-emerald {
+  box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.4);
+}
+
+/* Haikei Organic Wave Curve Divider */
+.haikei-wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.haikei-wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 54px;
+}
+
+/* Tactile Card with High-Definition Ambient Depth */
+.card-tactile {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.04), 0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+.card-tactile:hover {
+  border-color: rgba(203, 213, 225, 1);
+  box-shadow: 0 6px 12px -2px rgba(15, 23, 42, 0.06), 0 16px 32px -4px rgba(15, 23, 42, 0.08);
+}
+
+/* Disaster Category Glow Cards */
+.disaster-card-flood:hover, .disaster-card-flood.active {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 10px 25px -4px rgba(14, 165, 233, 0.25) !important;
+  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%) !important;
+}
+
+.disaster-card-landslide:hover, .disaster-card-landslide.active {
+  border-color: #fbbf24 !important;
+  box-shadow: 0 10px 25px -4px rgba(217, 119, 6, 0.2) !important;
+  background: linear-gradient(180deg, #fefce8 0%, #ffffff 100%) !important;
+}
+
+.disaster-card-fire:hover, .disaster-card-fire.active {
+  border-color: #fb923c !important;
+  box-shadow: 0 10px 25px -4px rgba(249, 115, 22, 0.25) !important;
+  background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%) !important;
+}
+
+.disaster-card-earthquake:hover, .disaster-card-earthquake.active {
+  border-color: #34d399 !important;
+  box-shadow: 0 10px 25px -4px rgba(16, 185, 129, 0.25) !important;
+  background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%) !important;
+}
+
+.disaster-card-accident:hover, .disaster-card-accident.active {
+  border-color: #f87171 !important;
+  box-shadow: 0 10px 25px -4px rgba(225, 29, 72, 0.25) !important;
+  background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%) !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.65);
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 380" preserveAspectRatio="none" fill="none">
+  <defs>
+    <linearGradient id="vibrant-wave-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fecdd3" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#fed7aa" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a7f3d0" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="vibrant-wave-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#99f6e4" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#fde68a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fecaca" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="vibrant-wave-3" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#ccfbf1" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fee2e2" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#vibrant-wave-1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,138.7C672,149,768,203,864,208C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,380L1392,380C1344,380,1248,380,1152,380C1056,380,960,380,864,380C768,380,672,380,576,380C480,380,384,380,288,380C192,380,96,380,48,380L0,380Z"></path>
+  <path fill="url(#vibrant-wave-2)" d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,218.7C672,224,768,192,864,170.7C960,149,1056,139,1152,149.3C1248,160,1344,192,1392,208L1440,224L1440,380L1392,380C1344,380,1248,380,1152,380C1056,380,960,380,864,380C768,380,672,380,576,380C480,380,384,380,288,380C192,380,96,380,48,380L0,380Z"></path>
+  <path fill="url(#vibrant-wave-3)" d="M0,280L60,270C120,260,240,240,360,245C480,250,600,280,720,285C840,290,960,270,1080,265C1200,260,1320,270,1380,275L1440,280L1440,380L1380,380C1320,380,1200,380,1080,380C960,380,840,380,720,380C600,380,480,380,360,380C240,380,120,380,60,380L0,380Z"></path>
+</svg>
