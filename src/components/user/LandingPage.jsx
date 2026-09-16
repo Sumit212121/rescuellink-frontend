@@ -123,7 +123,7 @@ const disasters = [
   {
     id: 'accident',
     icon: TraumaAmbulanceIcon,
-    title: 'Trauma & Highway',
+    title: 'Accident',
     sub: 'Advanced Life Support (ALS)',
     cardClass: 'disaster-card-accident',
     iconBg: 'bg-gradient-to-br from-rose-500 to-red-700 text-white shadow-md',
@@ -248,30 +248,36 @@ const operationalSteps = [
 
 const survivorAccounts = [
   {
-    quote: '"During the intense floods in North Bihar, standard phone lines collapsed. We hit the RescueConnect SOS beacon on our phone. A relief boat was assigned within 4 minutes, and we watched their live GPS approach until we were safely evacuated."',
+    quote: 'Water was entering our house and phone calls failed. We pressed the SOS button on the app. The rescue team got our live location and saved us quickly.',
     author: 'Rajesh & Meena Kumar',
     location: 'Patna District, Bihar',
     verified: 'Flood Rescue #SOS-8924 Verified',
     tag: 'SURVIVOR ACCOUNT',
     tagStyle: { backgroundColor: '#e0f2fe', color: '#0369a1', borderColor: '#7dd3fc' },
+    avatarBg: '#0284c7',
+    initials: 'RK',
     date: 'August 2026'
   },
   {
-    quote: '"As an on-ground coordinator during the Kerala landslides, RescueConnect eliminated chaos. We received filtered triage requests with exact coordinates instead of scattered WhatsApp forwards. Every kit we delivered was transparently logged."',
+    quote: 'Usually we get fake messages on WhatsApp during floods. This app gave us real locations and urgent cases. It helped us reach people much faster.',
     author: 'Capt. Priya Menon (Retd.)',
     location: 'Wayanad Relief Command, Kerala',
     verified: 'State NGO Partner #412',
     tag: 'FIELD COMMANDER',
     tagStyle: { backgroundColor: '#d1fae5', color: '#047857', borderColor: '#6ee7b7' },
+    avatarBg: '#059669',
+    initials: 'PM',
     date: 'July 2026'
   },
   {
-    quote: '"I contributed ₹15,000 for emergency medical supplies. Within 6 hours, I received a verified dispatch manifest showing 30 suture kits and trauma dressings delivered to field medics in Guwahati. The transparency is unlike anything else."',
+    quote: 'Most places do not show how they use our money. But here, I could see exactly when my donation was sent and delivered to the people.',
     author: 'Amitabh Sharma',
     location: 'Mumbai, Maharashtra',
     verified: 'Direct Aid Contributor #884',
     tag: 'VERIFIED DONOR',
     tagStyle: { backgroundColor: '#fef3c7', color: '#b45309', borderColor: '#fcd34d' },
+    avatarBg: '#d97706',
+    initials: 'AS',
     date: 'September 2026'
   }
 ]
@@ -408,15 +414,9 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                 <span className="text-base sm:text-2xl font-black tracking-tight text-slate-900 leading-none whitespace-nowrap">
                   Rescue<span style={{ color: '#e11d48' }}>Connect</span>
                 </span>
-                <span
-                  className="px-1.5 py-0.5 sm:px-2 rounded text-[8px] sm:text-[9px] font-black tracking-wider uppercase text-white shadow-xs shrink-0"
-                  style={{ backgroundColor: '#e11d48' }}
-                >
-                  CAD
-                </span>
               </div>
               <span className="hidden sm:block text-[10px] font-black tracking-widest text-slate-500 mt-1 uppercase whitespace-nowrap">
-                National Emergency Relay Grid
+                National Emergency
               </span>
             </div>
           </a>
@@ -460,7 +460,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
               style={{ backgroundColor: '#ecfdf5', borderColor: '#a7f3d0', color: '#047857' }}
             >
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Fiscal Audit</span>
+              <span>Donation Proof</span>
             </button>
 
             <button
@@ -696,7 +696,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
               style={{ backgroundColor: '#ffffff', borderColor: '#fca5a5', color: '#881337' }}
             >
               <span className="w-2 h-2 rounded-full bg-rose-600 animate-pulse-dot" />
-              <span>NATIONAL MULTI-DISASTER CAD EMERGENCY RELAY SYSTEM</span>
+              <span>LIVE DISASTER RESCUE & EMERGENCY NETWORK</span>
             </div>
 
             {/* Dynamic Two-Tone Headline */}
@@ -706,7 +706,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
             </h1>
 
             <p className="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl font-normal leading-relaxed">
-              When disaster strikes, ordinary cellular lines fail. RescueConnect bridges stranded citizens, specialized motorboats, and trauma medics via automated GIS telemetry with zero bureaucratic delay.
+             When phone networks fail during floods, RescueConnect instantly connects people in danger with rescue boats and medical teams using live GPS tracking.
             </p>
 
             {/* Guaranteed Solid Red & Emerald Action Buttons */}
@@ -721,7 +721,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                 }}
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
-                <span>TRANSMIT EMERGENCY SOS</span>
+                <span>SEND EMERGENCY SOS</span>
               </button>
 
               <button
@@ -730,7 +730,7 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                 style={{ borderColor: '#6ee7b7', color: '#047857' }}
               >
                 <span>🛡️</span>
-                <span>Track Relief Fund Ledgers</span>
+                <span> Donation Proof</span>
               </button>
             </div>
 
@@ -789,10 +789,10 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
               </div>
 
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 text-center tracking-tight">
-                Distress Telemetry Transponder
+                Disaster SOS Alert
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 text-center mt-1 mb-8 max-w-md">
-                One touch locks device latitude &amp; longitude coordinates and broadcasts directly to the closest standby relief fleet.
+                One tap shares your live location with the nearest rescue team.
               </p>
 
               {/* Telemetry Status Badges */}
@@ -952,13 +952,13 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                     SOS
                   </span>
                   <span className="text-[10px] font-black uppercase tracking-widest text-rose-100 mt-1">
-                    TRANSMIT RELAY
+                    TAP FOR HELP
                   </span>
                 </button>
               </div>
 
               <p className="mt-5 text-xs font-bold text-slate-700 flex items-center gap-1.5 text-center">
-                <span className="font-black" style={{ color: '#e11d48' }}>👆 Tap or Press to Transmit Coordinates</span>
+                <span className="font-black" style={{ color: '#e11d48' }}>👆Tap to send your location for help.</span>
               </p>
               <p className="text-[11px] text-slate-400 mt-0.5">
                 Low-bandwidth failover • Dual satellite &amp; cellular relay
@@ -1166,16 +1166,15 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                 FIELD VERIFICATIONS
               </span>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                Accounts from the Disaster Zone
+                Voices from the Disaster Zone
               </h2>
               <p className="mt-3 text-slate-600 text-sm sm:text-base">
-                Direct experiences from verified flood and landslide survivors, search &amp; rescue commanders, and humanitarian micro-donors.
+                Real stories from people who needed help, teams who saved them, and those who supported.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {survivorAccounts.map((item, i) => (
-                <div key={i} className="card-tactile p-8 rounded-3xl flex flex-col justify-between motion-spring hover:shadow-lg">
+                <div key={i} className="card-tactile p-7 sm:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between motion-spring">
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span
@@ -1186,17 +1185,26 @@ export default function LandingPage({ user, onLogout, onLoginSuccess }) {
                       </span>
                       <span className="text-[11px] font-mono text-slate-400">{item.date}</span>
                     </div>
-                    <p className="text-slate-700 text-sm leading-relaxed italic mb-6">
-                      {item.quote}
+                    <p className="text-slate-700 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
+                      “{item.quote}”
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-100">
-                    <p className="text-sm font-black text-slate-900">{item.author}</p>
-                    <p className="text-xs text-slate-500">{item.location}</p>
-                    <p className="text-[10px] font-mono font-black mt-1" style={{ color: '#047857' }}>
-                      {item.verified}
-                    </p>
+                  <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-2xs"
+                      style={{ backgroundColor: item.avatarBg }}
+                    >
+                      {item.initials}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-black text-slate-900 leading-snug truncate">{item.author}</p>
+                      <p className="text-xs text-slate-500 truncate">{item.location}</p>
+                      <p className="text-[11px] font-mono font-bold mt-0.5 flex items-center gap-1.5 text-emerald-700">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                        <span className="truncate">{item.verified}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
